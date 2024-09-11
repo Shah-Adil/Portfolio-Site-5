@@ -1,0 +1,67 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    @apply bg-background;
+  }
+
+  input,
+  textarea {
+    outline: none !important;
+    resize: none !important;
+  }
+
+  ::placeholder {
+    @apply text-white;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply text-black bg-primary font-semibold px-5 py-2 rounded-md transition-all hover:bg-purple-800 duration-500 text-base;
+  }
+
+  .badge {
+    @apply bg-badge text-black rounded-md px-2 py-1 text-base h-fit font-medium;
+  }
+
+  .center-50 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .center-x-50 {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hex {
+    clip-path: polygon(
+      50% 0%,
+      90% 20%,
+      100% 60%,
+      75% 100%,
+      25% 100%,
+      0% 60%,
+      10% 20%
+    );
+  }
+
+  .form-input {
+    @apply px-4 py-3  mb-4 w-full rounded-md text-white;
+  }
+  .w-500 {
+    width: 500px;
+    max-width: 100%;
+  }
+}
